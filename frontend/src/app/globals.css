@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f7f9;
+  --foreground: #16181d;
+  --surface: #ffffff;
+  --line: #e3e6eb;
+  --muted: #646b78;
+  --accent: #4f46e5;
+  --danger: #dc2626;
+  --warning: #d97706;
+  /* Source types: knowledge base, web, both */
+  --kb: #059669;
+  --web: #0284c7;
+  --both: #7c3aed;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0d0f13;
+    --foreground: #e8eaee;
+    --surface: #161920;
+    --line: #2a2e38;
+    --muted: #9aa1ad;
+    --accent: #818cf8;
+    --danger: #f87171;
+    --warning: #fbbf24;
+    --kb: #34d399;
+    --web: #38bdf8;
+    --both: #a78bfa;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-kb: var(--kb);
+  --color-web: var(--web);
+  --color-both: var(--both);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Answer text rendered from Markdown */
+.markdown > * + * { margin-top: 0.6em; }
+.markdown ul { list-style: disc; padding-left: 1.25rem; }
+.markdown ol { list-style: decimal; padding-left: 1.25rem; }
+.markdown li + li { margin-top: 0.25em; }
+.markdown strong { font-weight: 600; }
+.markdown a:not([href^="#cite-"]) { color: var(--web); text-decoration: underline; }
+.markdown code { font-family: var(--font-mono); font-size: 0.9em; background: var(--background); padding: 0.1em 0.3em; border-radius: 4px; }
+.markdown pre { overflow-x: auto; background: var(--background); padding: 0.75rem; border-radius: 8px; }
+.markdown pre code { background: none; padding: 0; }
+.markdown h1, .markdown h2, .markdown h3 { font-weight: 600; }
+.markdown table { display: block; overflow-x: auto; border-collapse: collapse; }
+.markdown th, .markdown td { border: 1px solid var(--line); padding: 0.3em 0.6em; }

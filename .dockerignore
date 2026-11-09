@@ -1,0 +1,22 @@
+# Secrets: passed in when the container runs, never built into the image
+.env
+.env.*
+**/.env
+**/.env.*
+
+# App data
+users.db
+uploads/
+qdrant_data/
+data/
+
+# Installed or generated files
+.venv/
+**/__pycache__/
+**/*.py[oc]
+**/node_modules/
+frontend/.next/
+frontend/out/
+
+.git/
+.claude/

@@ -1,0 +1,13 @@
+LangChain
+LangGraph
+LangChain-community
+LangChain-core
+LangChain-huggingface
+LangChain-groq
+LangChain-text-splitters
+LangChain-tavily
+LangChain-openai
+sentence-transformers
+python-dotenv
+beautifulsoup4
+qdrant-client

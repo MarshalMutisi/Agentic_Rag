@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Local Qdrant database
+qdrant_data/
+
+# Secrets
+.env
+
+# API data: user accounts and uploaded files
+users.db
+uploads/
+
+# Local sample documents
+data/
